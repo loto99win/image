@@ -7,7 +7,7 @@ exports.getProfiles = async(req, res) => {
 
 exports.postProfile = async(req, res) => {
     const {name} = req.body;
-    const imagePath = 'http://localhost:2000/images/' + req.file.filename;
+    const imagePath = 'https://image-uploads.onrender.com/images/' + req.file.filename;
     const profile = new Profile({
         name, imagePath,
     });
